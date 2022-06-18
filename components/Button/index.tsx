@@ -1,6 +1,12 @@
+import { FC, ReactNode } from 'react';
 import { colors } from '../../styles/theme';
 
-export default function Button ({ children, onClick }) {
+export interface IQButtonProps { 
+    children?: string | ReactNode
+    onClick: () => void
+}
+
+export const QButton: FC<IQButtonProps> = ({ children, onClick }) => {
     return(
         <>
             <button onClick={onClick}>

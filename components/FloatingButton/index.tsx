@@ -1,6 +1,11 @@
+import { FC, ReactNode } from 'react';
 import { colors } from '../../styles/theme';
 
-export default function FloatingButton ({ onClick }) {
+export interface QFloatingButtonProps { 
+    onClick: () => void
+}
+
+export const QFloatingButton: FC<QFloatingButtonProps> = ({ onClick }) => {
     return(
         <>
             <div onClick={onClick}>
